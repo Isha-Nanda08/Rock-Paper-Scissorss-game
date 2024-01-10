@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+    background-color: rgb(28, 28, 28);
+    /* margin:1rem; */
+    color: whitesmoke;
+}
+.title {
+    font-size:3rem;
+    text-align: center;
+    text-shadow: rgb(157, 157, 157);
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.selector{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+.move-button{
+    background-color:transparent;
+    border: 3px solid rgb(245, 244, 244);
+    height: 9rem;
+    width: 9rem;
+    /* align-items: center;; */
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover{
+        background-color: hsla(0, 0%, 50%, 0.614);
+    }
+    /* margin:0px; */
+    /* padding: 0; */
+    /* border:0; */
+    /* justify-content: space-evenly; */
+
+}
+.move-icon {
+    height:7rem ;
+    padding:1rem;
+}
+#icon{
+    padding-bottom:0;
+}
+
+.result {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.js-moves{
+    font-size: 1.5rem;
+    /* padding: 0; */
+    text-align: center;
+    margin-top:20px;
+}
+.reset-score-button{
+    background-color: rgb(246, 242, 242);
+    padding: 0.75rem;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid grey;
+    &:hover{
+        background-color: grey;
+        color: #fff;
+    }
+}
+
+
+.resett{
+    margin:50px;
+    text-align: center;
+    font-size: 30px;
+}

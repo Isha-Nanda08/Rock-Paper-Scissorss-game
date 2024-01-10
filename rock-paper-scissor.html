@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/rock-paper-scissor.css">
+    <title>ROCK PAPER SCISSOR</title>
+</head>
+<body>
+    <div class="game">
+        <p class="title">Rock Paper Scissor</p>
+        <div class="select">
+          <div class="selector">
+            <button class="rock move-button" onclick="
+               playGame('rock');
+                "><img  src="./images/rock-emoji.png" class="move-icon" alt="rock"></button>
+
+            <button class="paper move-button" onclick="
+                 playGame('paper');
+            "><img  src="./images/paper-emoji.png" class="move-icon" alt="Paper"></button>
+
+            <button class="scissor move-button" onclick="
+              playGame('scissor')
+            "><img  src="./images/scissor-emoji.png" class="move-icon" alt="Scissor"></button>
+          </div>
+            <p class="js-result result"></p>
+            <p class="js-moves moves"></p>
+            <div class="resett">
+            <p class="js-score"></p>
+
+            <button class="reset reset-score-button" onclick="
+            
+            resetValues();
+            localStorage.removeItem('score');
+            updateScore();
+            " >Reset Score</button>
+            </div>
+
+        <!-- <p><a href="">click here</a> to see the final version of this project.</p> -->
+        </div>
+    </div>
+    <script src="./javascript/stone-paper-scissor.js"></script>
+</body>
+</html>
