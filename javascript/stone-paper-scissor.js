@@ -122,11 +122,11 @@ localStorage.setItem('score',JSON.stringify(score));
 updateScore();
 document.querySelector('.js-result').innerHTML= `${result}`;
 
-document.querySelector('.js-moves').innerHTML= `Kaddu-Aryan-Vaibhav
+document.querySelector('.js-moves').innerHTML= `You
 <img src="./images/${pickedMove}-emoji.png" class="move-icon" id="icon" alt="pickedMove">
 
 <img src="./images/${computerMove}-emoji.png" class="move-icon " id="icon" alt="">
-Groot-Ishu`;
+Computer`;
 
 // alert(`you picked ${pickedMove}.computer picked ${computerMove}.${result}
 // Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);
