@@ -15,8 +15,15 @@ body{
     font-size:3rem;
     text-align: center;
     text-shadow: rgb(157, 157, 157);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-weight: bold;
+}
+
+.instructions{
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-decoration: underline;
 }
 
 .selector{
@@ -67,7 +74,7 @@ body{
     text-align: center;
     margin-top:20px;
 }
-.reset-score-button{
+.reset-score-button, .Auto-Play{
     background-color: rgb(246, 242, 242);
     padding: 0.75rem;
     text-align: center;

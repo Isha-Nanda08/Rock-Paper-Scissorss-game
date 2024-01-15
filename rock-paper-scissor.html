@@ -9,17 +9,16 @@
 <body>
     <div class="game">
         <p class="title">Rock Paper Scissor</p>
+        <p class="instructions">
+          Press 's' for scissor 'r' for rock and 'p' for paper or 'click on image'
+        </p>
         <div class="select">
           <div class="selector">
-            <button class="rock move-button" onclick="
-               playGame('rock');
-                "><img  src="./images/rock-emoji.png" class="move-icon" alt="rock"></button>
+            <button class="rock move-button js-rock-button"><img  src="./images/rock-emoji.png" class="move-icon" alt="rock"></button>
 
-            <button class="paper move-button" onclick="
-                 playGame('paper');
-            "><img  src="./images/paper-emoji.png" class="move-icon" alt="Paper"></button>
+            <button class="paper move-button js-paper-button"><img  src="./images/paper-emoji.png" class="move-icon" alt="Paper"></button>
 
-            <button class="scissor move-button" onclick="
+            <button class="scissor move-button js-scissor-button" onclick="
               playGame('scissor')
             "><img  src="./images/scissor-emoji.png" class="move-icon" alt="Scissor"></button>
           </div>
@@ -34,6 +33,10 @@
             localStorage.removeItem('score');
             updateScore();
             " >Reset Score</button>
+
+            <button class="Auto-Play" onclick="
+              autoplay();
+            ">Auto-Play</button>
             </div>
 
         <!-- <p><a href="">click here</a> to see the final version of this project.</p> -->

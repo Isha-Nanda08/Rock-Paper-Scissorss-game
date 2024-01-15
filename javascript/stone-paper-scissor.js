@@ -14,6 +14,24 @@ const score = JSON.parse(localStorage.getItem('score'))
 // }
 
 updateScore();
+let isAutoplay=false;
+// let playerMove;
+let intervalId;
+
+function autoplay() {
+    if(!isAutoplay){
+     intervalId=setInterval(()=> {
+     const playerMove=pickComputerMove();
+    //  playerMove;
+        playGame(playerMove);
+    },1500);
+    isAutoplay=true;
+    }   
+    else {
+        clearInterval(intervalId);
+        isAutoplay=false;
+    }
+}
 
 function resetValues() {
 score.losses=0;
@@ -21,6 +39,30 @@ score.ties=0;
 score.wins=0;
 }
 
+document.querySelector('.js-rock-button').addEventListener('click',()=>{
+    playGame('rock');
+});
+
+document.querySelector('.js-paper-button').addEventListener('click',()=>{
+    playGame('paper');
+});
+
+document.querySelector('.js-scissor-button').addEventListener('click',()=>{
+    playGame('scissor');
+});
+
+document.body.addEventListener('keydown',(event)=>{
+    if(event.key==='r'|| event.key==='R'){
+        playGame('rock');
+    }
+    else if (event.key==='P'|| event.key==='p'){
+        playGame('paper');
+    }
+    else if(event.key==='s'|| event.key==='S') {
+        playGame('scissor');
+        // playGame('scissor');
+    }
+})
 
 function playGame(pickedMove){
 let computerMove=pickComputerMove();
@@ -80,11 +122,11 @@ localStorage.setItem('score',JSON.stringify(score));
 updateScore();
 document.querySelector('.js-result').innerHTML= `${result}`;
 
-document.querySelector('.js-moves').innerHTML= `You
+document.querySelector('.js-moves').innerHTML= `Kaddu-Aryan-Vaibhav
 <img src="./images/${pickedMove}-emoji.png" class="move-icon" id="icon" alt="pickedMove">
 
 <img src="./images/${computerMove}-emoji.png" class="move-icon " id="icon" alt="">
-computer`;
+Groot-Ishu`;
 
 // alert(`you picked ${pickedMove}.computer picked ${computerMove}.${result}
 // Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);
